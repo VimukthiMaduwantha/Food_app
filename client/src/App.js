@@ -17,6 +17,7 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route exact path='/ourMenu' element={<OurMenu />} />
         <Route exact path='/aboutUs' element={<AboutUs />} />
+        <Route exact path='/test' element={<Test />} />
       </Routes>
     </>
   );

@@ -11,6 +11,7 @@ function NavBarComponent() {
                     <a href="/">Home</a>
                     <a href="/ourMenu">Our Menu</a>
                     <a href="/aboutUs">About Us</a>
+                    <a href="/test">Test</a>
                 </div>
                 <div
                     className={`nav-toggle ${isOpen && "open"}`}
