@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,12 +11,14 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function NavBarView() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <>
             <AppBar position="fixed" sx={{ backgroundColor: 'white', }}>
-                <Container maxWidth="100%">
+                <Container maxWidth="100%" >
                     <Toolbar disableGutters sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <Box sx={{ /* backgroundColor: 'blue', */ height: '42px', display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }}>
+                        <Box sx={{ height: '42px', display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }}>
                             <a href='/'>
                                 <img
                                     src={logo}
@@ -47,6 +49,7 @@ function NavBarView() {
                                 yummydish
                             </Typography>
                         </Box>
+
                         <Box sx={{ flexGrow: 0, }}>
                             <Tooltip title="Wishlist">
                                 <IconButton /* onClick={handleOpenUserMenu}  */ sx={{ p: 1 }}>
@@ -59,6 +62,7 @@ function NavBarView() {
                                 </IconButton>
                             </Tooltip>
                         </Box>
+
                     </Toolbar>
                 </Container>
             </AppBar >
